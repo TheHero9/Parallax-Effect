@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles.css">
+    <title>MyCV</title>
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo">Logo</a>
+      <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Work</a></li>
+        <li><a href="#">Contact</a></li>
+
+      </ul>
+    </header>
+    <section>
+
+      <img src="images/background.jfif" id="sky">
+      <img src="images/building.png" id="building">
+      <img src="images/clouds.png" id="clouds">
+
+      <img src="images/canyon.png" id="canyon">
+      <h2 id="text">Moon Light </h2>
+      <a href="#sec" id="btn" class="btn">Explore</a>
+
+
+    </section>
+
+    <div class="sec" id="sec">
+      <h2>Parallax Scrolling Effects</h2>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever sinc
+        e the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has s
+        urvived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It w
+        as popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with deskt
+        op publishing software like Aldus PageMaker including versions of Lorem Ipsum. <br><br>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever sinc
+          e the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has s
+          urvived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It w
+          as popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with deskt
+          op publishing software like Aldus PageMaker including versions of Lorem Ipsum. <br><br>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever sinc
+            e the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has s
+            urvived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It w
+            as popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with deskt
+            op publishing software like Aldus PageMaker including versions of Lorem Ipsum. <br><br>
+            popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with deskt
+            op publishing software like Aldus PageMaker including versions of Lorem Ipsum. <br><br>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever sinc
+              e the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has s
+              urvived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It w
+              as popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with deskt
+              op publishing software like Aldus PageMaker including versions of Lorem Ipsum. <br><br>
+
+    </div>
+
+    <script type="text/javascript">
+      let sky=document.getElementById("sky")
+      let clouds=document.getElementById("clouds")
+      let building=document.getElementById("building")
+      let canyon=document.getElementById("canyon")
+      let btn= document.getElementById("btn")
+      let header = document.querySelector("header")
+
+
+      window.addEventListener("scroll", function(){
+        let value = window.scrollY;
+        sky.style.left = value*0.25 + "px";
+        building.style.top = value*1 + "px";
+        clouds.style.top = value*1 + "px";
+        canyon.style.top = value*0 + "px";
+        text.style.marginRight= value*10 + "px"
+        btn.style.marginTop= value*1.5 + "px"
+        header.style.top=value*1.5+"px"
+
+      })
+    </script>
+  </body>
+</html>
